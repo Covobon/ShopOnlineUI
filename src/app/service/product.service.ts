@@ -11,7 +11,7 @@ export class ProductService {
   private apiProduct: string;
 
   constructor(private http: HttpClient) {
-    this.apiProduct = 'http://localhost:8080/api/product';
+    this.apiProduct = 'http://localhost:8080/api/product/phone';
   }
 
   public findAll(): Observable<Product[]> {
