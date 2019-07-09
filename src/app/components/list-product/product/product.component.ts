@@ -9,10 +9,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product;
-  
-  constructor() {}
+
+  constructor() {
+    
+  }
   ngOnInit() {
-    console.log(this.product)
   }
 
   getUrlImg() {

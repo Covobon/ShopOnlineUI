@@ -9,13 +9,17 @@ import { Product } from './../../module/product';
 export class ListProductComponent implements OnInit {
 
   products: Product[];
-
+  collectionSize: number;
+  pageSize = 10;
+  page = 1;
+  pagination = true;
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
     this.productService.findAll().subscribe(data => {
       this.products = data;
+      this.collectionSize = data.length;
     });
-    console.log(this.products.length);
+    console.log(this.collectionSize);
   }
 }
